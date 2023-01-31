@@ -14,12 +14,11 @@ body {
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  height: 297px;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  display:grid;
+  grid-template-rows: 1fr 1fr;
   justify-content: end;
-  width: 100vw;
+  align-items: flex-end;
 }
 a{
   text-decoration: none;
@@ -28,9 +27,10 @@ a{
   display: flex;
   flex-direction: column;
   gap: 1px;
-  justify-content: end;
+  justify-content: top;
   align-items: center;
-  width: 100%;
+  width: 100vw;
+  height: 100%;
 }
 .photo {
   width: 150px;
@@ -42,6 +42,8 @@ a{
   box-sizing: border-box;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
   animation: photo-animation 5s infinite;
+  margin-left: 50%;
+  transform: translate(-50%);
 }
 .name {
   color: white;
@@ -66,7 +68,7 @@ a{
   height: 40px;
   align-items: center;
   font-size: 18px;
-  margin-top: -3px;
+  margin-top: -10px;
 }
 
 .profiles a {
@@ -92,9 +94,6 @@ a{
 }
 
 @media screen and (max-width:1024px){
-  .contents{
-    height: 540px;
-  }
   .photo{
     width: 300px;
     border-width: 7.5px;
@@ -108,6 +107,7 @@ a{
   }
   .profiles{
     font-size: 36px;
+    gap: 15px;
   }
 }
 
